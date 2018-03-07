@@ -1,13 +1,18 @@
+:root {
+   --grey: #171B1E;
+   --pink: #EA3D77;
+}
+
 body {
-   background-color: #171B1E;
-   color: #EA3D77;
+   background-color: var(--grey);
+   color: var(--pink);
    margin: 0;
    font-family: 'Roboto', sans-serif;
 }
 
 #banner {
    position: relative;
-   background-color: red;
+   background-color: var(--pink);
    width: 100%;
    height: 300px;
    color: white;
@@ -26,4 +31,81 @@ body {
    font-size: 64px;
    vertical-align: middle;
    line-height: 300px;
+}
+
+#navBar {
+   width: 100%;
+   height: 40px;
+   background-color: var(--grey);
+   border-bottom: 1px solid black;
+}
+#navBar a {
+   color: var(--pink);
+   text-decoration: none;
+   width: 64px;
+   height: 40px;
+   line-height: 40px;
+   vertical-align: middle;
+   float: left;
+   text-align: center;
+   border-right: 1px solid black;
+}
+#navBar a.active {
+   background-color: #0D0F11;
+}
+#navBar.sticky a.active {
+   background-color: #ED608F;
+   animation: navBarFadeActive 0.5s ease-in-out;
+}
+#navBar.sticky {
+   position: fixed;
+   top: 0;
+   background-color: var(--pink);
+   color: white;
+   animation: navBarFade 0.5s ease-in-out;
+}
+#navBar.sticky a{
+   color: white;
+}
+.sticky + #content {
+  padding-top: 40px;
+}
+#floatRight {
+   float: right;
+   border-left: 1px solid black;
+}
+
+#featItem {
+   width: 30%;
+   margin: 64px 35% 64px 35%;
+}
+#FITitle {
+   font-size: 20px;
+   padding-bottom: 4px;
+}
+#FIImg img {
+   width: 100%;
+   /*padding: 0 10% 0 10%;*/
+}
+#footer {
+   width: 100%;
+   background-color: #111416;
+   padding: 32px 0 32px 0;
+}
+#footerContent {
+   margin-left: 16px;
+}
+
+
+@keyframes navBarFade {
+   0% {background-color: var(--grey);
+      color: var(--pink);}
+   100% {background-color: var(--pink);
+      color: white;}
+}
+@keyframes navBarFadeActive {
+   0% {background-color: #0D0F11;
+      color: var(--pink);}
+   100% {background-color: #ED608F;
+      color: white;}
 }
