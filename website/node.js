@@ -7,12 +7,15 @@ app.get("/", function(req, res) {
    res.sendFile(__dirname + "/" + "public/home.html");
 });
 
-var server = app.listen(8080, function() {
-   var host = server.address().address;
-   var port = server.address().port;
-});
+app.listen(8080);
+app.listen(80);
 
-var server = app.listen(80, function() {
-   var host = server.address().address;
-   var port = server.address().port;
-});
+// var server = app.listen(8080, function() {
+//    var host = server.address().address;
+//    var port = server.address().port;
+// });
+//
+// var server = app.listen(80, function() {
+//    var host = server.address().address;
+//    var port = server.address().port;
+// });
