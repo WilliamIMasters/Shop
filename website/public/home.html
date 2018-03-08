@@ -1,12 +1,14 @@
 <HTML>
    <head>
       <title>Bupreme</title>
+
+      <script type="text/javascript" src="scripts\JSONHandlerHome.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	  <link rel="icon" href="images/icon.PNG" type="image/gif" sizes="16x16">
       <script src="scripts/bannerBackground.js"></script>
       <link href="styling/style.css" rel="stylesheet" type="text/css">
    </head>
-   <body>
+   <body onload="jsonStartHome()">
       <div id="banner">
          <canvas id="bannerC"></canvas>
          <div id="bannerLogo"><span>Bupreme</span></div>
@@ -28,15 +30,15 @@
 
          <div id="featItem">
             <div id="FITitle"><span>Bupreme Shirt</span></div>
-            <div id="FIImg"><img src="images\TShirt.png"></img></div>
+            <div id="FIImg"><img src="images\TShirt001.png"></img></div>
             <div id="FIFoot">
-               <div id="FIPrice">£<span id="FIPrice">30.00</span></div>
+               <div id="FIPrice">£<span id="FIPriceSpan">30.00</span></div>
                <div id="FIDesc">All cotton classic <strike>Supreme</strike> Bupreme t-shirt with printed graphic on front.</div>
             </div>
          </div>
 
       </div>
-      
+
       <div id="footer">
          <div id="footerContent">
             <div>Official merch of TeamSuperFriends</div>

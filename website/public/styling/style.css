@@ -1,6 +1,8 @@
 :root {
    --grey: #171B1E;
+   --greyAlt: #111416;
    --pink: #EA3D77;
+   --pinkAlt: #ED608F;
 }
 
 body {
@@ -51,10 +53,10 @@ body {
    border-right: 1px solid black;
 }
 #navBar a.active {
-   background-color: #0D0F11;
+   background-color: var(--greyAlt);
 }
 #navBar.sticky a.active {
-   background-color: #ED608F;
+   background-color: var(--pinkAlt);
    animation: navBarFadeActive 0.5s ease-in-out;
 }
 #navBar.sticky {
@@ -75,6 +77,10 @@ body {
    border-left: 1px solid black;
 }
 
+#content {
+   padding: 8px;
+}
+
 #featItem {
    width: 30%;
    margin: 64px 35% 64px 35%;
@@ -89,11 +95,22 @@ body {
 }
 #footer {
    width: 100%;
-   background-color: #111416;
+   background-color: var(--greyAlt);
    padding: 32px 0 32px 0;
 }
 #footerContent {
    margin-left: 16px;
+}
+
+#contactLink {
+   color: white;
+}
+#contactItem {
+   width: 30%;
+   margin: 16px 35% 64px 35%;
+   text-align: center;
+   background-color: var(--greyAlt);
+   padding: 8px 8px 32px 8px;
 }
 
 
@@ -104,8 +121,8 @@ body {
       color: white;}
 }
 @keyframes navBarFadeActive {
-   0% {background-color: #0D0F11;
+   0% {background-color: var(--greyAlt);
       color: var(--pink);}
-   100% {background-color: #ED608F;
+   100% {background-color: var(--pinkAlt);
       color: white;}
 }
