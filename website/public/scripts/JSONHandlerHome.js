@@ -14,7 +14,7 @@ function editHome(data) {
    //console.log(data);
    document.getElementById("FITitle").innerHTML = data.name;
    //console.log(data.slug);
-   document.getElementById("FIImg").childNodes[0].src = "Images/" + data.slug + ".png";
+   document.getElementById("FIImg").childNodes[0].src = "images/" + data.slug + ".png";
    document.getElementById("FIPriceSpan").innerHTML = data.price;
    document.getElementById("FIDesc").innerHTML = data.description;
 }
