@@ -113,6 +113,17 @@ body {
    padding: 8px 8px 32px 8px;
 }
 
+#shopItems {
+   background-color: red;
+   width: 80%;
+   margin: 16px 10% 16px 10%;
+   display: grid;
+}
+#shopItem {
+   background-color: var(--greyAlt);
+   width: 300px;
+   height: 400px;
+}
 
 @keyframes navBarFade {
    0% {background-color: var(--grey);
