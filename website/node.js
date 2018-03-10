@@ -7,8 +7,8 @@ app.get("/", function(req, res) {
    res.sendFile(__dirname + "/" + "public/home.html");
 });
 
-app.listen(8080);
-//app.listen(80);
+//app.listen(8080);
+app.listen(80);
 
 // var server = app.listen(8080, function() {
 //    var host = server.address().address;

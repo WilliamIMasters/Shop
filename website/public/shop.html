@@ -25,9 +25,16 @@
       </div>
 
       <div id="content">
-         <template>
+         <template id="itemTemplate">
             <div id="shopItems">
-               <div id="shopItem"><div id="title"></div></div>
+               <div id="shopItem">
+                  <div id="shopItemTitle">Plain Bupreme TShirt</div>
+                  <img id="shopItemImg" src="images\TShirt001.png"></img>
+                  <div id="shopItemButtons">
+                     <button class="shopItemButton" onclick="viewItem()">View Item</button>
+                     <button class="shopItemButton" onclick="buyItem()">Buy</button>
+                  </div>
+               </div>
             </div>
          </template>
 
