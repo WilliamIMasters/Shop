@@ -2,13 +2,13 @@
    <head>
       <title>Bupreme</title>
 
-      <script type="text/javascript" src="scripts\JSONHandlerShop.js"></script>
+      <script type="text/javascript" src="scripts\JSONHandlerItem.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	   <link rel="icon" href="images/icon.PNG" type="image/gif" sizes="16x16">
+	  <link rel="icon" href="images/icon.PNG" type="image/gif" sizes="16x16">
       <script src="scripts/bannerBackground.js"></script>
       <link href="styling/style.css" rel="stylesheet" type="text/css">
    </head>
-   <body onload="jsonStartShop()">
+   <body onload="jsonStartItem()">
       <div id="banner">
          <canvas id="bannerC"></canvas>
          <div id="bannerLogo"><span>Bupreme</span></div>
@@ -17,7 +17,7 @@
       <div id="navBar">
          <div id="links">
             <a href="home.html">Home</a>
-            <a href="shop.html"  class="active">Shop</a>
+            <a href="shop.html">Shop</a>
             <a href="contact.html">Contact</a>
          </div>
          <div id="floatRight">
@@ -27,22 +27,15 @@
 
       <div id="content">
 
-         <template id="itemTemplate">
-            <div id="shopItem">
-               <div id="shopItemTitle">Plain Bupreme TShirt</div>
-               <img id="shopItemImg" src="images\TShirt001.png"></img>
-               <div id="shopItemButtons">
-                  <button class="shopItemButton" value="-1" onclick={viewItem(value)} >View Item</button>
-                  <button class="shopItemButton" value="-1" onclick={buyItem(value)} >Buy</button>
-               </div>
+
+         <div id="featItem">
+            <div id="FITitle"><span>Bupreme Shirt</span></div>
+            <div id="FIImg"><img src="images\TShirt001.png"></img></div>
+            <div id="FIFoot">
+               <div id="FIPrice">£<span id="FIPriceSpan">30.00</span></div>
+               <div id="FIDesc">All cotton classic <strike>Supreme</strike> Bupreme t-shirt with printed graphic on front.</div>
             </div>
-         </template>
-
-
-         <div id="shopItems">
-
          </div>
-
 
       </div>
 

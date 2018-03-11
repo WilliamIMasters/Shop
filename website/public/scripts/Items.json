@@ -5,5 +5,12 @@
       "price": 30.00,
       "description": "All cotton classic <strike>Supreme</strike> Bupreme t-shirt with printed graphic on front.",
       "slug": "TShirt001"
+   },
+   {
+      "id": 1,
+      "name": "THOT",
+      "price": 300000.00,
+      "description": "Item used for testing",
+      "slug": "icon"
    }
 ]

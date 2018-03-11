@@ -1,8 +1,9 @@
-function jsonStartHome() {
+function jsonStartItem() {
+   let id = getParameterByName("id");
    readTextFile("scripts/Items.json", function(text){
        var data = JSON.parse(text);
        if (data != null) {
-          editHome(data[data.length-1]);
+          editItem(data[id]);
        } else {
           console.log("Error loading json");
        }
@@ -10,15 +11,13 @@ function jsonStartHome() {
    });
 }
 
-function editHome(data) {
+function editItem(data) {
    //console.log(data);
    document.getElementById("FITitle").innerHTML = data.name;
-   //console.log(data.slug);
    document.getElementById("FIImg").childNodes[0].src = "images/" + data.slug + ".png";
    document.getElementById("FIPriceSpan").innerHTML = data.price;
    document.getElementById("FIDesc").innerHTML = data.description;
 }
-
 
 
 
@@ -34,4 +33,14 @@ function readTextFile(file, callback) { // thanks to Stano https://stackoverflow
         }
     }
     rawFile.send(null);
+}
+
+function getParameterByName(name, url) { // thanks to Stano
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

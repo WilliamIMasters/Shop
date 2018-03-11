@@ -11,3 +11,12 @@ function stickyNav() {
 		navbar.classList.remove("sticky"); // non sticky
 	}
 }
+
+function buyItem(id) {
+	alert("Sorry, this feature is currently unavailable. Item ID: " + id);
+}
+
+function viewItem(id) {
+	//console.log(id);
+	window.location.href = "Item.html?id=" + id;
+}
