@@ -4,7 +4,7 @@
 
       <script type="text/javascript" src="scripts\JSONHandlerHome.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	  <link rel="icon" href="images/icon.PNG" type="image/gif" sizes="16x16">
+      <link rel="icon" href="images/icon.PNG" type="image/gif" sizes="16x16">
       <script src="scripts/bannerBackground.js"></script>
       <link href="styling/style.css" rel="stylesheet" type="text/css">
    </head>
@@ -21,8 +21,21 @@
             <a href="contact.html">Contact</a>
          </div>
          <div id="floatRight">
-            <a href="login.html">login</a>
+            <a onclick="OpenLogin()">login</a>
          </div>
+      </div>
+
+      <div id="modal" class="modal">
+
+         <div class="modalContent">
+            <div class="header"><div onclick="CloseLogin()" class="exit">X</div></div>
+            <p>User Name: </p>
+            <input type="text" placeholder="WillMasters"></input>
+            <p>Password: </p>
+            <input type="password"></input>
+            <button id="submit">Login</button>
+         </div>
+
       </div>
 
       <div id="content">

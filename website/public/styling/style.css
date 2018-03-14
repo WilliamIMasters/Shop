@@ -76,6 +76,53 @@ body {
    float: right;
    border-left: 1px solid black;
 }
+#floatRight a {
+   cursor: pointer;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.6);
+}
+.modalContent {
+   background-color: var(--greyAlt);
+   margin: 15% auto;
+   padding: 32px;
+   border: 1px solid black;
+   width: 80%;
+}
+div.modalContent div.header {
+   margin: -32px;
+   height: 32px;
+
+   float: right;
+}
+div.modalContent div.header div.exit {
+   background-color: var(--pink);
+   color: var(--grey);
+   width: 32px;
+   height: 32px;
+   line-height: 32px;
+   text-align: center;
+   cursor: pointer;
+}
+div.modalContent p {
+   margin: 8px 0 8px 0;
+}
+div.modalContent input {
+   margin 8px;
+}
+#submit {
+   display: block;
+   margin: 8px 0 8px 0;
+}
 
 #content {
    padding: 8px;
