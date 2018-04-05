@@ -17,15 +17,13 @@ function jsonStartShop() {
 function editShop(data) {
    let template = document.querySelector("template").content;
    for (let i=0; i < data.length; i++) {
-      console.log(i);
+      //console.log(i);
       let templateCopy = template.cloneNode(true);
       //templateCopy.getElementById("shopItemTitle").setAttribute("data-value", data[i].id);
       templateCopy.getElementById("shopItemTitle").innerHTML = data[i].name;
       templateCopy.getElementById("shopItemImg").src = "images/" + data[i].slug + ".png";
-      let buttons = templateCopy.getElementById("shopItemButtons");
-      for (let j=0; j < 2; j++) {
-         buttons.childNodes[j].value = data[i].id;
-      }
+      templateCopy.getElementById("viewItem").value = data[i].id;
+      templateCopy.getElementById("buyItem").value = data[i].id;
 
 
       document.getElementById("shopItems").appendChild(templateCopy);

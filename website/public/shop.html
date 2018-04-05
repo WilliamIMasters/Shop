@@ -7,6 +7,7 @@
 	   <link rel="icon" href="images/icon.PNG" type="image/gif" sizes="16x16">
       <script src="scripts/bannerBackground.js"></script>
       <link href="styling/style.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    </head>
    <body onload="jsonStartShop()">
       <div id="banner">
@@ -16,13 +17,27 @@
 
       <div id="navBar">
          <div id="links">
-            <a href="home.html">Home</a>
-            <a href="shop.html"  class="active">Shop</a>
-            <a href="contact.html">Contact</a>
+            <a href="home">Home</a>
+            <a href="shop" class="active">Shop</a>
+            <a href="contact">Contact</a>
          </div>
          <div id="floatRight">
-            <a href="login.html">login</a>
+            <a onclick="OpenLogin()">login</a>
+            <a href="cart"><i class="material-icons">shopping_cart</i> <span id="itemCount">0</span></a>
          </div>
+      </div>
+
+      <div id="modal" class="modal">
+
+         <div class="modalContent">
+            <div class="header"><div onclick="CloseLogin()" class="exit">X</div></div>
+            <p>User Name: </p>
+            <input type="text" placeholder="WillMasters"></input>
+            <p>Password: </p>
+            <input type="password"></input>
+            <button id="submit">Login</button>
+         </div>
+
       </div>
 
       <div id="content">
@@ -32,8 +47,8 @@
                <div id="shopItemTitle">Plain Bupreme TShirt</div>
                <img id="shopItemImg" src="images\TShirt001.png"></img>
                <div id="shopItemButtons">
-                  <button class="shopItemButton" value="-1" onclick={viewItem(value)} >View Item</button>
-                  <button class="shopItemButton" value="-1" onclick={buyItem(value)} >Buy</button>
+                  <button id="viewItem" class="shopItemButton" value="-1" onclick={viewItem(value)} >View Item</button>
+                  <button id="buyItem" class="shopItemButton" value="-1" onclick={buyItem(value)} >Add to cart</button>
                </div>
             </div>
          </template>
@@ -49,6 +64,7 @@
       <div id="footer">
          <div id="footerContent">
             <div>Official merch of TeamSuperFriends</div>
+            <div>Made by William Masters</div>
          </div>
       </div>
 

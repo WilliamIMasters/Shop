@@ -55,6 +55,10 @@ body {
 #navBar a.active {
    background-color: var(--greyAlt);
 }
+#navBar i {
+   line-height: 40px;
+   vertical-align: middle;
+}
 #navBar.sticky a.active {
    background-color: var(--pinkAlt);
    animation: navBarFadeActive 0.5s ease-in-out;
@@ -147,6 +151,13 @@ div.modalContent input {
 }
 #footerContent {
    margin-left: 16px;
+
+}
+#footerContent div {
+   height: 35px;
+   line-height: 35px;
+
+   vertical-align: center;
 }
 
 #contactLink {

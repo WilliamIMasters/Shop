@@ -7,6 +7,7 @@
       <link rel="icon" href="images/icon.PNG" type="image/gif" sizes="16x16">
       <script src="scripts/bannerBackground.js"></script>
       <link href="styling/style.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    </head>
    <body onload="jsonStartHome()">
       <div id="banner">
@@ -16,12 +17,13 @@
 
       <div id="navBar">
          <div id="links">
-            <a href="home.html" class="active">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
+            <a href="home" class="active">Home</a>
+            <a href="shop">Shop</a>
+            <a href="contact">Contact</a>
          </div>
          <div id="floatRight">
             <a onclick="OpenLogin()">login</a>
+            <a href="cart"><i class="material-icons">shopping_cart</i> <span id="itemCount">0</span></a>
          </div>
       </div>
 
@@ -55,6 +57,7 @@
       <div id="footer">
          <div id="footerContent">
             <div>Official merch of TeamSuperFriends</div>
+            <div>Made by William Masters</div>
          </div>
       </div>
 

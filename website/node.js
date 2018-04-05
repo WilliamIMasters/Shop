@@ -3,19 +3,31 @@ var app = express();
 
 app.use(express.static("public"));
 
+
+
+
 app.get("/", function(req, res) {
-   res.sendFile(__dirname + "/" + "public/home.html");
+   res.sendFile(__dirname + "/public/home.html");
+
 });
 
-//app.listen(8080);
-app.listen(80);
+app.get("/home", function(req, res) {
+   //res.sendFile(__dirname + "/public/home.html");
+   res.redirect(".");
+});
+app.get("/shop", function(req, res) {
+   res.sendFile(__dirname + "/public/shop.html");
 
-// var server = app.listen(8080, function() {
-//    var host = server.address().address;
-//    var port = server.address().port;
-// });
-//
-// var server = app.listen(80, function() {
-//    var host = server.address().address;
-//    var port = server.address().port;
-// });
+});
+app.get("/contact", function(req, res) {
+   res.sendFile(__dirname + "/public/contact.html");
+
+});
+app.get("/cart", function(req, res) {
+   res.send("Sorry, this feature is not currently available </br><a href='.'> Home </a>");
+});
+
+
+
+
+app.listen(80);
