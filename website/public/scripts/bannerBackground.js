@@ -1,8 +1,8 @@
 var canvas;
 var canvasContext;
-let r = 0;
-let g = 0;
-let b = 0;
+//let r = 0;
+//let g = 0;
+//set b = 0;
 
 window.onload = function() {
    canvas = document.getElementById("bannerC");

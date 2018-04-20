@@ -74,7 +74,7 @@ body {
    color: white;
 }
 .sticky + #content {
-  padding-top: 40px;
+  margin-top: 40px;
 }
 #floatRight {
    float: right;
@@ -129,7 +129,7 @@ div.modalContent input {
 }
 
 #content {
-   padding: 8px;
+   padding: 16px;
 }
 
 #featItem {
